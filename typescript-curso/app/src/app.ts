@@ -10,3 +10,13 @@ form.addEventListener('submit', (event) =>{
 }else{
   throw Error('Não foi possível iniciar a aplicação')
 }
+
+const botaoImporta = document.querySelector('#botao-importa');
+if(botaoImporta){
+  botaoImporta.addEventListener('click', () => {
+    controller.importarDados();
+  });
+}else{
+  throw new Error("Botão importa não foi encontrado");
+  
+}
